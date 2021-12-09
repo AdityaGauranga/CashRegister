@@ -12,7 +12,7 @@
 }
 
 :root {
-    --primary-color: 
+    --primary-color: #86BA10;
 }
 
 body {
@@ -28,4 +28,22 @@ body {
 
   .heading {
     color: var(--primary-color);
+  }
+
+  .description {
+    font-size: larger;
+    margin: 1rem;
+  }
+
+  #check-button {
+    background: var(--primary-color);
+    border: none;
+    color: #fff;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+    font-size: large;
+    cursor: pointer;
+    outline: #fff;
+    margin: auto;
+    display: block;
   }
