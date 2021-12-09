@@ -10,3 +10,22 @@
     width: 50vw;
     /* width is 50% of viewport width */
 }
+
+:root {
+    --primary-color: 
+}
+
+body {
+    font-family: "Calibri", sans-serif;
+    min-width: 100vw;
+  }
+  
+  /* container */
+  .container {
+    margin: 4rem auto 7rem;
+    text-align: center;
+  }
+
+  .heading {
+    color: var(--primary-color);
+  }
