@@ -4,12 +4,33 @@ const checkButton = document.querySelector("#check-button");
 const message = document.querySelector("#error-message");
 
 checkButton.addEventListener("click", function validateBillnCashAmount(){
-    message.style.display = "none";
+    hideMessage();
     if (billAmount.value > 0){
+        if(cashGiven.value >= billAmount.value ) {
+            const amountToBeReturned = cashGiven.value - billAmount.value;
+            calculateChange(amountToBeReturned);
+        }
+        else {
+            showMessage(
+                "The cash provided should atleast be equal to the bill amount"
+            );
+
+        }
 
     }
     else {
-        message.style.display = "block";
-        message.innerText = "The bill amount should be greater than 0";
+        showMessage("Invalid Bill Amount");
     } 
 });
+
+fucntion calculateChange(){
+    
+}
+
+function hideMessage() {
+    message.style.display = "none";
+}
+function showMessage(msg) {
+    message.style.display = "block";
+    message.innerText = msg;
+}
